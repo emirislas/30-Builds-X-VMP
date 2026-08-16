@@ -28,7 +28,8 @@ export default async function GraciasPage({
       const session = await stripe.checkout.sessions.retrieve(sessionId);
 
       paymentVerified =
-        session.payment_status === "paid" && session.status === "complete";
+        session.payment_status === "paid" &&
+        session.status === "complete";
 
       customerName =
         session.customer_details?.name ||
@@ -101,7 +102,6 @@ export default async function GraciasPage({
   return (
     <main className="relative flex min-h-screen items-center overflow-hidden bg-black px-6 py-12 text-white md:px-12 lg:px-20">
 
-      {/* 30 GIGANTE */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute right-[-8vw] top-1/2 -translate-y-1/2 select-none text-[75vw] font-black leading-none tracking-[-0.1em] text-transparent opacity-20 [-webkit-text-stroke:1px_#F2FF00] md:text-[55vw]"
@@ -109,12 +109,10 @@ export default async function GraciasPage({
         30
       </div>
 
-      {/* GLOW */}
       <div className="pointer-events-none absolute bottom-[-180px] left-1/2 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-[#F2FF00]/5 blur-[160px]" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1400px]">
 
-        {/* HEADER */}
         <div className="flex items-center justify-between border-b border-white/10 pb-6">
           <p className="text-xs font-semibold tracking-[0.25em]">
             30 BUILDS × VMP
@@ -123,10 +121,10 @@ export default async function GraciasPage({
           <span className="h-2 w-2 rounded-full bg-[#F2FF00] shadow-[0_0_14px_#F2FF00]" />
         </div>
 
-        {/* CONTENT */}
         <div className="grid gap-14 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:py-28">
 
           <div>
+
             <p className="text-xs font-semibold tracking-[0.2em] text-[#F2FF00]">
               PAGO CONFIRMADO
             </p>
@@ -147,6 +145,7 @@ export default async function GraciasPage({
                 Reserva registrada para {customerName}.
               </p>
             )}
+
           </div>
 
           <div className="max-w-lg lg:pb-2">
@@ -186,7 +185,6 @@ export default async function GraciasPage({
 
         </div>
 
-        {/* BOTTOM */}
         <div className="flex flex-col justify-between gap-4 border-t border-white/10 pt-6 text-[10px] tracking-[0.12em] text-white/30 sm:flex-row">
 
           <span>
