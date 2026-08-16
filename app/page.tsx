@@ -81,7 +81,9 @@ export default function Home() {
       {/* CTA */}
       <div className="mt-7 md:mt-9">
         <a
-          href="#reservar"
+          href="https://book.stripe.com/dRm3cu855gCJabMg8icEw00"
+          target="_blank"
+rel="noopener noreferrer"
           className="group inline-flex w-full items-center justify-center gap-3 bg-[#F2FF00] px-8 py-4 text-xs font-bold tracking-[0.05em] text-black transition duration-300 hover:scale-[1.02] hover:bg-white sm:w-auto"
         >
           RESERVAR MI ESPACIO
@@ -1125,7 +1127,9 @@ export default function Home() {
       <div className="lg:min-w-[360px]">
 
         <a
-          href="#"
+          href="https://book.stripe.com/dRm3cu855gCJabMg8icEw00"
+          target="_blank"
+rel="noopener noreferrer"
           className="group flex w-full items-center justify-between bg-[#F2FF00] px-6 py-6 text-sm font-bold tracking-[0.04em] text-black transition-all duration-300 hover:scale-[1.015] hover:bg-white md:px-8"
         >
 
