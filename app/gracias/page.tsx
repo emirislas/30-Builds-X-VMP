@@ -63,17 +63,18 @@ export default function GraciasPage() {
 
             <div className="mt-9">
 
-              {/* DESPUÉS CAMBIAREMOS ESTE HREF POR GOOGLE CALENDAR */}
-              <a
-                href="#"
-                className="group flex w-full items-center justify-between bg-[#F2FF00] px-6 py-5 text-sm font-bold text-black transition duration-300 hover:bg-white md:px-8"
-              >
-                <span>AGENDAR MI KICKOFF</span>
+             <a
+  href="https://calendar.app.google/N223sB4xucksFTxWA"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group flex w-full items-center justify-between bg-[#F2FF00] px-6 py-5 text-sm font-bold text-black transition duration-300 hover:bg-white md:px-8"
+>
+  <span>AGENDAR MI KICKOFF</span>
 
-                <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </a>
+  <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</a>
 
               <p className="mt-4 text-xs leading-5 text-white/30">
                 Elige únicamente uno de los horarios disponibles. Recibirás la
