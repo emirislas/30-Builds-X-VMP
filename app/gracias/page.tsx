@@ -11,7 +11,9 @@ type GraciasPageProps = {
     session_id?: string;
   }>;
 };
+
 export default async function GraciasPage({
+  searchParams,
 }: GraciasPageProps) {
   const params = await searchParams;
   const sessionId = params.session_id;
