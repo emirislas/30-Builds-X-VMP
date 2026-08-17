@@ -1,4 +1,6 @@
+
 import Link from "next/link";
+import PurchaseTracker from "./PurchaseTracker";
 import Stripe from "stripe";
 
 export const metadata = {
@@ -45,6 +47,7 @@ export default async function GraciasPage({
   ========================================================== */
   if (!paymentVerified) {
     return (
+        
       <main className="relative flex min-h-screen items-center overflow-hidden bg-black px-6 py-12 text-white md:px-12 lg:px-20">
 
         <div
@@ -100,8 +103,10 @@ export default async function GraciasPage({
       PAGO VERIFICADO
   ========================================================== */
   return (
-    <main className="relative flex min-h-screen items-center overflow-hidden bg-black px-6 py-12 text-white md:px-12 lg:px-20">
+  <>
+    <PurchaseTracker transactionId={sessionId!} />
 
+    <main className="relative flex min-h-screen items-center overflow-hidden bg-black px-6 py-12 text-white md:px-12 lg:px-20">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute right-[-8vw] top-1/2 -translate-y-1/2 select-none text-[75vw] font-black leading-none tracking-[-0.1em] text-transparent opacity-20 [-webkit-text-stroke:1px_#F2FF00] md:text-[55vw]"
@@ -202,6 +207,7 @@ export default async function GraciasPage({
 
       </div>
 
-    </main>
-  );
+          </main>
+  </>
+);
 }
