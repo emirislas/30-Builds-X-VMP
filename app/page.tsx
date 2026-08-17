@@ -4,6 +4,9 @@ import {
   ShieldCheck,
   MonitorSmartphone,
 } from "lucide-react";
+import { sendGAEvent } from "@next/third-parties/google";
+import CheckoutButton from "./CheckoutButton";
+
 export default function Home() {
   
   
@@ -78,21 +81,15 @@ export default function Home() {
         para crear páginas web personalizadas y de alto impacto.
       </p>
 
-      {/* CTA */}
-      <div className="mt-7 md:mt-9">
-        <a
-          href="https://book.stripe.com/dRm3cu855gCJabMg8icEw00"
-          target="_blank"
-rel="noopener noreferrer"
-          className="group inline-flex w-full items-center justify-center gap-3 bg-[#F2FF00] px-8 py-4 text-xs font-bold tracking-[0.05em] text-black transition duration-300 hover:scale-[1.02] hover:bg-white sm:w-auto"
-        >
-          RESERVAR MI ESPACIO
+      <CheckoutButton
+  className="group inline-flex w-full items-center justify-center gap-3 bg-[#F2FF00] px-8 py-4 text-xs font-bold tracking-[0.05em] text-black transition duration-300 hover:scale-[1.02] hover:bg-white sm:w-auto"
+>
+  RESERVAR MI ESPACIO
 
-          <span className="transition-transform duration-300 group-hover:translate-x-1">
-            →
-          </span>
-        </a>
-      </div>
+  <span className="transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</CheckoutButton>
 
       {/* BENEFICIOS */}
 <div className="mt-12 grid max-w-3xl grid-cols-2 gap-x-6 gap-y-6 border-t border-white/10 pt-6 text-[11px] text-white/55 md:grid-cols-4">
@@ -1121,27 +1118,15 @@ rel="noopener noreferrer"
       </div>
 
 
-      {/* =====================================================
-          BOTÓN
-      ====================================================== */}
-      <div className="lg:min-w-[360px]">
+     <CheckoutButton
+  className="group flex w-full items-center justify-between bg-[#F2FF00] px-6 py-6 text-sm font-bold tracking-[0.04em] text-black transition-all duration-300 hover:scale-[1.015] hover:bg-white md:px-8"
+>
+  <span>RESERVAR MI ESPACIO</span>
 
-        <a
-          href="https://book.stripe.com/dRm3cu855gCJabMg8icEw00"
-          target="_blank"
-rel="noopener noreferrer"
-          className="group flex w-full items-center justify-between bg-[#F2FF00] px-6 py-6 text-sm font-bold tracking-[0.04em] text-black transition-all duration-300 hover:scale-[1.015] hover:bg-white md:px-8"
-        >
-
-          <span>
-            RESERVAR MI ESPACIO
-          </span>
-
-          <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
-            →
-          </span>
-
-        </a>
+  <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</CheckoutButton>
 
 
         {/* WHATSAPP SECONDARY */}
@@ -1185,8 +1170,6 @@ rel="noopener noreferrer"
       </div>
 
     </div>
-
-  </div>
 
 </section>
 
