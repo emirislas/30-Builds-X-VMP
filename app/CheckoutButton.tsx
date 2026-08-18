@@ -15,8 +15,6 @@ export default function CheckoutButton({
   return (
     <a
       href="https://book.stripe.com/dRm3cu855gCJabMg8icEw00"
-      target="_blank"
-      rel="noopener noreferrer"
       onClick={() =>
         sendGAEvent("event", "begin_checkout", {
           value: 5999,

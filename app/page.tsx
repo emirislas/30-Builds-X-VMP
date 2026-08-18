@@ -27,7 +27,7 @@ export default function Home() {
 
     <div className="flex items-center gap-2 text-[9px] tracking-[0.08em] md:text-xs">
       <span className="font-semibold text-[#F2FF00]">
-        30 / 30
+        
       </span>
 
       <span className="hidden text-white/60 sm:inline">
@@ -192,7 +192,7 @@ export default function Home() {
         <div className="mt-6 md:mt-8">
 
           <p className="text-xl text-white/40 line-through md:text-3xl">
-            $15,999 MXN
+           
           </p>
 
           {/* PRECIO PROMO */}
@@ -212,12 +212,12 @@ export default function Home() {
 
         {/* AHORRO */}
         <div className="mt-5 border border-white/25 px-3 py-3 text-center text-[10px] tracking-[0.03em] text-white/80 md:mt-6 md:px-4 md:text-xs md:tracking-[0.04em]">
-          AHORRA $10,000 MXN · 67%
+          Precio especial de lanzamiento
         </div>
 
         {/* ESPACIOS */}
         <p className="mt-6 text-center text-[10px] font-semibold tracking-[0.28em] text-[#F2FF00] md:mt-7 md:text-xs md:tracking-[0.35em]">
-          SOLO 30 ESPACIOS
+        30 proyectos disponibles a precio de lanzamiento
         </p>
 
       </div>
@@ -1087,7 +1087,7 @@ export default function Home() {
         <div className="mt-4 flex flex-wrap items-end gap-x-5 gap-y-2">
 
           <p className="text-2xl text-white/30 line-through md:text-3xl">
-            $15,999
+           
           </p>
 
           <p className="text-[clamp(4rem,8vw,7rem)] font-semibold leading-[0.85] tracking-[-0.07em] text-[#F2FF00]">
@@ -1104,7 +1104,7 @@ export default function Home() {
         <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
 
           <span className="text-xs font-semibold tracking-[0.14em] text-[#F2FF00]">
-            30 / 30 DISPONIBLES
+            
           </span>
 
           <span className="hidden h-1 w-1 rounded-full bg-white/20 sm:block" />
