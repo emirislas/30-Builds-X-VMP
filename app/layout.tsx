@@ -13,18 +13,54 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "30 Builds × VMP",
-  description: "Tu negocio merece una web.",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.studiovmp.com"),
+
+  title: {
+    default: "30 Builds × VMP | Desarrollo web para negocios",
+    template: "%s | 30 Builds × VMP",
+  },
+
+  description:
+    "30 Builds × VMP es una edición limitada de desarrollo web para negocios. Sitios personalizados por $5,999 MXN con diseño, desarrollo y publicación incluidos dentro del alcance especificado.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+
+  openGraph: {
+    title: "30 Builds × VMP",
+    description:
+      "Desarrollo web personalizado para negocios. Edición limitada a 30 proyectos.",
+    url: "https://www.studiovmp.com",
+    siteName: "VMP",
+    locale: "es_MX",
+    type: "website",
+  },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
-      lang="en"
+      lang="es-MX"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
 
       <GoogleAnalytics gaId="G-S6XJ0832VY" />
     </html>

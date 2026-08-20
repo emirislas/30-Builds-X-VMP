@@ -4,8 +4,8 @@ import {
   ShieldCheck,
   MonitorSmartphone,
 } from "lucide-react";
-import { sendGAEvent } from "@next/third-parties/google";
 import CheckoutButton from "./CheckoutButton";
+import Link from "next/link";
 
 export default function Home() {
   
@@ -27,11 +27,11 @@ export default function Home() {
 
     <div className="flex items-center gap-2 text-[9px] tracking-[0.08em] md:text-xs">
       <span className="font-semibold text-[#F2FF00]">
-        
+        EDICIÓN 30 BUILDS
       </span>
 
       <span className="hidden text-white/60 sm:inline">
-        ESPACIOS DISPONIBLES
+        LIMITADA A 30 PROYECTOS
       </span>
 
       <span className="h-2 w-2 rounded-full bg-[#F2FF00] shadow-[0_0_14px_#F2FF00]" />
@@ -77,8 +77,8 @@ export default function Home() {
       </h1>
 
       <p className="mt-7 max-w-xl text-sm leading-6 text-white/55 md:mt-9 md:text-lg md:leading-7">
-        Estoy renovando mi book. Por eso abrí únicamente 30 espacios
-        para crear páginas web personalizadas y de alto impacto.
+        Estoy renovando mi portafolio. Por eso abrí una edición limitada a 30 proyectos
+        para crear páginas web personalizadas con un alcance claro y un precio fijo.
       </p>
 
       <CheckoutButton
@@ -130,9 +130,9 @@ export default function Home() {
     />
 
     <span>
-      Sitio seguro
+      Publicación
       <br />
-      y optimizado
+      con HTTPS
     </span>
   </div>
 
@@ -185,17 +185,16 @@ export default function Home() {
 
         {/* LABEL */}
         <p className="inline-block border border-[#F2FF00] px-3 py-2 text-[9px] font-semibold tracking-[0.12em] text-[#F2FF00] md:px-4 md:text-[10px] md:tracking-[0.15em]">
-          OFERTA ESPECIAL · 30 BUILDS
+          PRECIO 30 BUILDS · ALCANCE DEFINIDO
         </p>
 
-        {/* PRECIO ORIGINAL */}
+        {/* PRECIO TOTAL DEL PAQUETE */}
         <div className="mt-6 md:mt-8">
 
-          <p className="text-xl text-white/40 line-through md:text-3xl">
-           
+          <p className="text-xs font-semibold tracking-[0.12em] text-white/40">
+            PRECIO TOTAL DEL PAQUETE
           </p>
 
-          {/* PRECIO PROMO */}
           <div className="mt-3 flex items-end">
 
             <p className="text-[clamp(4rem,18vw,5.5rem)] font-semibold leading-none tracking-[-0.07em] text-[#F2FF00] md:text-[clamp(4rem,8vw,7rem)]">
@@ -210,14 +209,15 @@ export default function Home() {
 
         </div>
 
-        {/* AHORRO */}
-        <div className="mt-5 border border-white/25 px-3 py-3 text-center text-[10px] tracking-[0.03em] text-white/80 md:mt-6 md:px-4 md:text-xs md:tracking-[0.04em]">
-          Precio especial de lanzamiento
+        {/* TRANSPARENCIA DE PRECIO */}
+        <div className="mt-5 border border-white/20 px-4 py-4 text-[10px] leading-5 text-white/60 md:mt-6 md:text-xs">
+          Incluye el alcance descrito en esta página. Dominio, renovaciones y servicios externos no están incluidos.
+          Cualquier funcionalidad adicional se cotiza y autoriza por separado antes de realizarse.
         </div>
 
         {/* ESPACIOS */}
-        <p className="mt-6 text-center text-[10px] font-semibold tracking-[0.28em] text-[#F2FF00] md:mt-7 md:text-xs md:tracking-[0.35em]">
-        30 proyectos disponibles a precio de lanzamiento
+        <p className="mt-6 text-center text-[10px] font-semibold tracking-[0.22em] text-[#F2FF00] md:mt-7 md:text-xs md:tracking-[0.28em]">
+          EDICIÓN LIMITADA A 30 PROYECTOS
         </p>
 
       </div>
@@ -563,8 +563,8 @@ export default function Home() {
 
 
       <p className="max-w-lg text-lg leading-8 text-white/45 lg:justify-self-end">
-        Tres negocios. Tres estilos completamente distintos.
-        Cada web se construye alrededor de la identidad de la marca.
+        Tres direcciones visuales distintas para mostrar el tipo de diseño, estructura
+        y adaptación a móvil que puede tener cada proyecto.
       </p>
 
     </div>
@@ -609,7 +609,7 @@ export default function Home() {
           <div>
 
             <h3 className="text-base font-semibold">
-              Interiorismo
+              Concepto · Interiorismo
             </h3>
 
             <p className="mt-1 text-xs text-white/35">
@@ -661,7 +661,7 @@ export default function Home() {
           <div>
 
             <h3 className="text-base font-semibold">
-              Fitness
+              Concepto · Fitness
             </h3>
 
             <p className="mt-1 text-xs text-white/35">
@@ -713,7 +713,7 @@ export default function Home() {
           <div>
 
             <h3 className="text-base font-semibold">
-              Gastronomía
+              Concepto · Gastronomía
             </h3>
 
             <p className="mt-1 text-xs text-white/35">
@@ -739,10 +739,10 @@ export default function Home() {
     <span className="font-semibold text-white/40">
       Nota:
     </span>{" "}
-    Por privacidad y confidencialidad, los nombres, marcas e imágenes
-    mostrados en estos ejemplos han sido sustituidos por contenido ficticio
-    y recursos generados con IA. Los proyectos reflejan el diseño, estructura
-    y dirección visual del trabajo realizado.
+    Estos ejemplos son recreaciones visuales de trabajo de diseño y desarrollo.
+    Para proteger la confidencialidad, nombres, marcas e imágenes han sido sustituidos
+    por contenido ficticio y recursos generados con IA. No implican afiliación, respaldo
+    ni colaboración con las marcas o identidades ficticias mostradas.
   </p>
 </div>
 
@@ -803,7 +803,7 @@ export default function Home() {
               {
                 number: "03",
                 title: "DISEÑO & DESARROLLO",
-                text: "En una semana presentamos la primera versión.",
+                text: "Con los materiales completos, presentamos la primera versión durante la primera semana.",
               },
               {
                 number: "04",
@@ -926,9 +926,9 @@ export default function Home() {
 
           <div className="pb-7 pl-10 md:pl-12">
             <p className="max-w-2xl text-sm leading-7 text-white/45 md:text-base">
-              Presentamos la primera versión durante la primera semana.
-              Después tenemos una revisión 1:1 para revisar y anotar cambios.
-              La entrega final está contemplada para la segunda semana.
+              El calendario comienza cuando recibimos los materiales necesarios del proyecto.
+              Con el material completo, presentamos la primera versión durante la primera semana.
+              Después revisamos cambios dentro del alcance y contemplamos la entrega final para la segunda semana.
             </p>
           </div>
         </details>
@@ -1004,7 +1004,72 @@ export default function Home() {
 
 
       {/* =========================================================
-    07 — CTA FINAL
+    07 — TRANSPARENCIA Y CONDICIONES
+========================================================== */}
+<section id="informacion" className="border-b border-white/10 bg-[#050505] px-6 py-20 md:px-12 lg:px-20">
+  <div className="mx-auto max-w-[1500px]">
+    <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <div>
+        <p className="text-xs font-semibold tracking-[0.18em] text-[#F2FF00]">
+          INFORMACIÓN CLARA ANTES DE RESERVAR
+        </p>
+        <h2 className="mt-5 text-4xl font-semibold tracking-[-0.04em] md:text-5xl">
+          Qué compras y con quién.
+        </h2>
+      </div>
+
+      <div className="grid gap-px bg-white/10 sm:grid-cols-2">
+        <div className="bg-black p-6">
+          <p className="text-[10px] font-semibold tracking-[0.15em] text-[#F2FF00]">PRESTADOR DEL SERVICIO</p>
+          <p className="mt-3 text-sm leading-6 text-white/55">
+            VMP ofrece servicios de diseño y desarrollo web bajo el proyecto 30 Builds × VMP.
+            Para dudas antes de pagar puedes contactarnos directamente por WhatsApp.
+          </p>
+        </div>
+
+        <div className="bg-black p-6">
+          <p className="text-[10px] font-semibold tracking-[0.15em] text-[#F2FF00]">PRECIO Y ALCANCE</p>
+          <p className="mt-3 text-sm leading-6 text-white/55">
+            El precio del paquete es $5,999 MXN e incluye únicamente el alcance descrito en esta página.
+            Cualquier adicional se cotiza por separado y requiere autorización previa.
+          </p>
+        </div>
+
+        <div className="bg-black p-6">
+          <p className="text-[10px] font-semibold tracking-[0.15em] text-[#F2FF00]">PAGO</p>
+          <p className="mt-3 text-sm leading-6 text-white/55">
+            El pago se procesa mediante Stripe en su checkout seguro. VMP no almacena los datos de tu tarjeta en este sitio.
+          </p>
+        </div>
+
+        <div className="bg-black p-6">
+          <p className="text-[10px] font-semibold tracking-[0.15em] text-[#F2FF00]">DATOS Y MEDICIÓN</p>
+          <p className="mt-3 text-sm leading-6 text-white/55">
+            Utilizamos Google Analytics para medir visitas e interacción con el sitio. Consulta nuestro Aviso de Privacidad para conocer el tratamiento de datos.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs text-white/45">
+      <Link href="/terminos" className="transition-colors hover:text-white">Términos del servicio →</Link>
+      <Link href="/privacidad" className="transition-colors hover:text-white">Aviso de privacidad →</Link>
+      <Link href="/cancelaciones" className="transition-colors hover:text-white">Cancelaciones y reembolsos →</Link>
+      <a
+        href="https://wa.me/525564676459?text=Hola%2C%20vi%2030%20Builds%20y%20quiero%20resolver%20una%20duda%20antes%20de%20reservar."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition-colors hover:text-white"
+      >
+        Contacto por WhatsApp →
+      </a>
+    </div>
+  </div>
+</section>
+
+
+      {/* =========================================================
+    08 — CTA FINAL
 ========================================================== */}
 <section
   id="reservar"
@@ -1086,10 +1151,6 @@ export default function Home() {
 
         <div className="mt-4 flex flex-wrap items-end gap-x-5 gap-y-2">
 
-          <p className="text-2xl text-white/30 line-through md:text-3xl">
-           
-          </p>
-
           <p className="text-[clamp(4rem,8vw,7rem)] font-semibold leading-[0.85] tracking-[-0.07em] text-[#F2FF00]">
             $5,999
           </p>
@@ -1104,16 +1165,20 @@ export default function Home() {
         <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
 
           <span className="text-xs font-semibold tracking-[0.14em] text-[#F2FF00]">
-            
+            EDICIÓN LIMITADA A 30 PROYECTOS
           </span>
 
           <span className="hidden h-1 w-1 rounded-full bg-white/20 sm:block" />
 
           <span className="text-xs text-white/35">
-            Primera versión en una semana.
+            Primera versión en una semana con materiales completos.
           </span>
 
         </div>
+
+        <p className="mt-5 max-w-xl text-xs leading-5 text-white/35">
+          Precio del alcance descrito en esta página. Dominio, renovaciones, licencias y servicios externos se pagan por separado cuando sean necesarios.
+        </p>
 
       </div>
 
@@ -1164,7 +1229,7 @@ export default function Home() {
         </span>
 
         <span>
-          SOLO 30 PROYECTOS · CUANDO SE ACABAN, SE ACABAN.
+          EDICIÓN LIMITADA A 30 PROYECTOS.
         </span>
 
       </div>
@@ -1176,23 +1241,48 @@ export default function Home() {
 
 
       {/* =========================================================
-          FOOTER
-      ========================================================== */}
-      <footer className="border-t border-white/10 px-6 py-7 text-[10px] tracking-[0.12em] text-white/35 md:px-12 lg:px-20">
+    FOOTER
+========================================================== */}
+<footer className="border-t border-white/10 px-6 py-7 text-[10px] tracking-[0.12em] text-white/35 md:px-12 lg:px-20">
 
-        <div className="mx-auto flex max-w-[1500px] flex-col justify-between gap-4 sm:flex-row">
+  <div className="mx-auto flex max-w-[1500px] flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
 
-          <span>
-            VMP © 2026
-          </span>
+    <span>
+      VMP © 2026
+    </span>
 
-          <span>
-            30 BUILDS × VMP
-          </span>
+    <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
 
-        </div>
+      <Link
+        href="/legal#terminos"
+        className="transition-colors hover:text-white"
+      >
+        TÉRMINOS
+      </Link>
 
-      </footer>
+      <Link
+        href="/legal#cancelaciones"
+        className="transition-colors hover:text-white"
+      >
+        CANCELACIONES
+      </Link>
+
+      <Link
+        href="/legal#privacidad"
+        className="transition-colors hover:text-white"
+      >
+        PRIVACIDAD
+      </Link>
+
+    </div>
+
+    <span>
+      30 BUILDS × VMP
+    </span>
+
+  </div>
+
+</footer>
 
 
 

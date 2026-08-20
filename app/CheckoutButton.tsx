@@ -8,19 +8,32 @@ type CheckoutButtonProps = {
   children: ReactNode;
 };
 
+const CHECKOUT_URL =
+  "https://book.stripe.com/dRm3cu855gCJabMg8icEw00";
+
 export default function CheckoutButton({
   className,
   children,
 }: CheckoutButtonProps) {
+  const handleCheckout = () => {
+    sendGAEvent("event", "begin_checkout", {
+      currency: "MXN",
+      value: 5999,
+      items: [
+        {
+          item_id: "30-builds-vmp",
+          item_name: "30 Builds × VMP",
+          price: 5999,
+          quantity: 1,
+        },
+      ],
+    });
+  };
+
   return (
     <a
-      href="https://book.stripe.com/dRm3cu855gCJabMg8icEw00"
-      onClick={() =>
-        sendGAEvent("event", "begin_checkout", {
-          value: 5999,
-          currency: "MXN",
-        })
-      }
+      href={CHECKOUT_URL}
+      onClick={handleCheckout}
       className={className}
     >
       {children}

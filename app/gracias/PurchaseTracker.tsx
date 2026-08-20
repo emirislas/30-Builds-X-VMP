@@ -11,6 +11,13 @@ export default function PurchaseTracker({
   transactionId,
 }: PurchaseTrackerProps) {
   useEffect(() => {
+    const storageKey = `purchase_tracked_${transactionId}`;
+
+    // Evita volver a enviar la misma compra desde este navegador.
+    if (sessionStorage.getItem(storageKey)) {
+      return;
+    }
+
     sendGAEvent("event", "purchase", {
       transaction_id: transactionId,
       value: 5999,
@@ -24,6 +31,8 @@ export default function PurchaseTracker({
         },
       ],
     });
+
+    sessionStorage.setItem(storageKey, "true");
   }, [transactionId]);
 
   return null;
